@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Categoria:</b>
+  <%= @perfil.categoria_id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @perfil.nome %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @perfil.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_perfil_path(@perfil) %> |
+<%= link_to 'Back', perfis_path %>

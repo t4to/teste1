@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  admin_id: 1
+  descricao: MyString
+  subcat_id: 1
+
+two:
+  admin_id: 1
+  descricao: MyString
+  subcat_id: 1

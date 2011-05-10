@@ -1,0 +1,43 @@
+<%= form_for(@categoria) do |f| %>
+  <% if @categoria.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@categoria.errors.count, "error") %> prohibited this categoria from being saved:</h2>
+
+      <ul>
+      <% @categoria.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :admin_id %><br />
+    <!-- <%= f.text_field :admin_id %> -->
+    <div>
+		<%= f.collection_select(:admin_id,
+			get_current_admin(current_admin),
+			:id, :email, {:class => 'input'} ) %>		
+	</div>
+
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :subcat_id %><br />
+    <!--<%= f.text_field :subcat_id %>-->
+	
+    <div>
+		<%= f.collection_select(:subcat_id,
+			get_subcateg(:id),
+			:id, :descricao, {:prompt => "<Raíz>"}, {:class => 'input'} ) %>		
+	</div>
+	
+	
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
