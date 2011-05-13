@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 	return categ if current_admin == nil
 	
 	categ = Categoria.find_all_by_admin_id(current_admin.id)
-	#Categoria.where("admin_id == :admin_id AND subcat_id != nill")
+	#Categoria.where("admin_id == :admin_id AND subcat_id != nil")
   end
   
   def get_perfis_from_current_admin(current_admin) 

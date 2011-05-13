@@ -17,7 +17,7 @@
 	
     <div>
 		<%= f.collection_select(:categoria_id,
-			Categoria.all,
+			get_categorias_from_current_admin(current_admin),
 			:id, :descricao, {:prompt => "Selecione..."}, {:class => 'input'} ) %>		
 	</div>  
 	

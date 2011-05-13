@@ -20,4 +20,5 @@ class Categoria < ActiveRecord::Base
 			false
 		end
 	end
+
 end

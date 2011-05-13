@@ -16,7 +16,7 @@
     <!-- <%= f.text_field :admin_id %> -->
     <div>
 		<%= f.collection_select(:admin_id,
-			get_current_admin(current_admin),
+			get_array_current_admin(current_admin),
 			:id, :email, {:class => 'input'} ) %>		
 	</div>
 
