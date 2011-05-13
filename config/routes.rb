@@ -9,9 +9,9 @@ Teste1::Application.routes.draw do
 	devise_for :admin,
 			:path => '/',
 			:path_names => {
-				:sign_in  => 'login',
-				:sign_out => 'logout',
-				:sign_up => 'register'}
+				:sign_in  => 'entrar',
+				:sign_out => 'sair',
+				:sign_up => 'registrar'}
 
 	root :to => "home#index"
 	

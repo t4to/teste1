@@ -5,6 +5,7 @@ class PerfisController < ApplicationController
   # GET /perfis.xml
   def index
     @perfis = Perfil.all
+	#@perfis = get_perfis_from_current_admin(current_admin)
 
     respond_to do |format|
       format.html # index.html.erb
